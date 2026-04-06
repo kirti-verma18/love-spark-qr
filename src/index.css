@@ -6,23 +6,23 @@
 
 @layer base {
   :root {
-    --background: 340 80% 96%;
-    --foreground: 340 40% 20%;
+    --background: 280 30% 8%;
+    --foreground: 300 20% 90%;
 
-    --card: 340 60% 98%;
-    --card-foreground: 340 40% 20%;
+    --card: 280 40% 14%;
+    --card-foreground: 300 20% 90%;
 
-    --popover: 340 60% 98%;
-    --popover-foreground: 340 40% 20%;
+    --popover: 280 40% 14%;
+    --popover-foreground: 300 20% 90%;
 
-    --primary: 340 82% 55%;
+    --primary: 330 85% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 320 60% 90%;
-    --secondary-foreground: 340 40% 25%;
+    --secondary: 280 50% 25%;
+    --secondary-foreground: 300 20% 90%;
 
-    --muted: 340 30% 92%;
-    --muted-foreground: 340 20% 50%;
+    --muted: 280 30% 18%;
+    --muted-foreground: 300 15% 60%;
 
     --accent: 15 90% 65%;
     --accent-foreground: 0 0% 100%;
@@ -30,18 +30,19 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 340 40% 88%;
-    --input: 340 40% 88%;
-    --ring: 340 82% 55%;
+    --border: 280 30% 22%;
+    --input: 280 30% 22%;
+    --ring: 330 85% 60%;
 
     --radius: 1rem;
 
-    --love-pink: 340 82% 55%;
-    --love-rose: 350 90% 65%;
-    --love-soft: 340 80% 96%;
-    --love-deep: 340 70% 40%;
+    --love-pink: 330 85% 60%;
+    --love-rose: 340 90% 65%;
+    --love-soft: 280 30% 12%;
+    --love-deep: 330 70% 45%;
     --love-warm: 15 90% 65%;
-    --love-glow: 340 100% 80%;
+    --love-glow: 300 100% 75%;
+    --love-purple: 280 70% 55%;
 
     --font-display: 'Dancing Script', cursive;
     --font-body: 'Quicksand', sans-serif;
@@ -81,17 +82,27 @@
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(135deg, hsl(var(--love-pink)), hsl(var(--love-warm)));
   }
+  .text-gradient-purple {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--love-pink)), hsl(var(--love-purple)));
+  }
   .bg-gradient-love {
     background: linear-gradient(135deg, hsl(var(--love-pink)), hsl(var(--love-rose)), hsl(var(--love-warm)));
   }
+  .bg-gradient-dark {
+    background: radial-gradient(ellipse at bottom, hsl(280 40% 15%), hsl(280 30% 6%));
+  }
   .bg-gradient-soft {
-    background: linear-gradient(180deg, hsl(var(--love-soft)), hsl(340 70% 93%));
+    background: radial-gradient(ellipse at bottom, hsl(280 40% 15%), hsl(280 30% 6%));
   }
   .shadow-love {
-    box-shadow: 0 8px 32px -8px hsl(var(--love-pink) / 0.3);
+    box-shadow: 0 8px 32px -8px hsl(var(--love-pink) / 0.4);
   }
   .glow-love {
     box-shadow: 0 0 30px hsl(var(--love-glow) / 0.4), 0 0 60px hsl(var(--love-glow) / 0.2);
+  }
+  .glow-purple {
+    box-shadow: 0 0 40px hsl(var(--love-purple) / 0.5), 0 0 80px hsl(var(--love-purple) / 0.2);
   }
 }
 
@@ -107,10 +118,33 @@
   75% { transform: scale(1.05); }
 }
 
+@keyframes shooting-star {
+  0% { transform: translateY(-100vh) translateX(0) rotate(35deg); opacity: 1; }
+  100% { transform: translateY(100vh) translateX(200px) rotate(35deg); opacity: 0; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
 
 .animate-heartbeat {
   animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.animate-shooting-star {
+  animation: shooting-star 3s linear infinite;
+}
+
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
 }
