@@ -1,16 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import FloatingHearts from "@/components/FloatingHearts";
+import WelcomeScreen from "@/components/WelcomeScreen";
+import LoveSlider from "@/components/LoveSlider";
+import LoveQuestions from "@/components/LoveQuestions";
+import FunScreen from "@/components/FunScreen";
+import BirthdayMessage from "@/components/BirthdayMessage";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+type Screen = "welcome" | "slider" | "questions" | "fun" | "birthday";
+
+const Index = () => {
+  const [screen, setScreen] = useState<Screen>("welcome");
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen bg-gradient-soft overflow-hidden relative">
+      <FloatingHearts />
+      <AnimatePresence mode="wait">
+        {screen === "welcome" && <WelcomeScreen key="welcome" onNext={() => setScreen("slider")} />}
+        {screen === "slider" && <LoveSlider key="slider" onNext={() => setScreen("questions")} />}
+        {screen === "questions" && <LoveQuestions key="questions" onNext={() => setScreen("fun")} />}
+        {screen === "fun" && <FunScreen key="fun" onNext={() => setScreen("birthday")} />}
+        {screen === "birthday" && <BirthdayMessage key="birthday" />}
+      </AnimatePresence>
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
