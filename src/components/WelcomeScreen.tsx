@@ -31,48 +31,48 @@ const WelcomeScreen = ({ onNext }: Props) => {
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.6 }}
-        className="text-5xl md:text-6xl font-display text-gradient-love mb-4"
+        className="text-4xl md:text-5xl font-display text-gradient-love mb-4"
       >
-        Hey Handsome!
+        Happy Birthday, Pookie! ❤️
       </motion.h1>
 
       <motion.p
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.9 }}
-        className="text-lg font-body text-muted-foreground max-w-sm mb-2"
+        className="text-lg font-body text-muted-foreground max-w-sm mb-3"
       >
-        So today is YOUR special day... 🎂
+        To the one who holds my heart and makes my entire world brighter just by existing in it... 🎂✨
       </motion.p>
 
       <motion.p
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1.1 }}
-        className="text-base font-body text-muted-foreground max-w-sm mb-4"
+        transition={{ delay: 1.2 }}
+        className="text-base font-body text-muted-foreground max-w-sm mb-5"
       >
-        But before we get to the good stuff, you gotta prove something first... 😏
+        I have so much to say and a few surprises waiting, but before we dive in...
       </motion.p>
 
       <motion.p
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1.4 }}
-        className="text-sm font-body text-love-deep italic max-w-xs mb-8"
+        transition={{ delay: 1.5 }}
+        className="text-md font-body text-love-deep italic max-w-md mb-8 px-4"
       >
-        Yes yes, I know it's YOUR day... but honestly? Every single day of mine belongs to you anyway 💕
+        "I love you not only for what you are, but for who I am when I am with you." 💕 Ready for a little journey?
       </motion.p>
 
       <motion.button
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1.7 }}
+        transition={{ delay: 1.8 }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={onNext}
-        className="bg-gradient-love text-primary-foreground font-body font-semibold px-10 py-4 rounded-full shadow-love text-lg"
+        className="bg-gradient-love text-primary-foreground font-body font-semibold px-10 py-4 rounded-full shadow-love text-lg transition-all hover:shadow-lg"
       >
-        Alright, Let's Go! 💘
+        Take My Hand 💘
       </motion.button>
     </motion.div>
   );

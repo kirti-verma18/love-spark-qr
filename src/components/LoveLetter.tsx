@@ -6,23 +6,22 @@ interface Props {
 }
 
 const letterLines = [
-  "From the moment you came into my life,",
-  "everything changed for the better.",
+  "Okay, real talk for a second... 🥺",
   "",
-  "You make me laugh when I want to cry.",
-  "You hold me when the world feels heavy.",
-  "Every challenge feels easier because",
-  "I imagine you by my side.",
+  "Life with you is the best plot twist ever.",
+  "You're the person I love to annoy most,",
+  "the one who makes my world brighter,",
+  "and the only one who truly gets me.",
   "",
-  "You are not just my person,",
-  "you're the most special part of my life.",
-  "You make me smile, you make my heart race,",
-  "and you make me want to be a better",
-  "version of myself.",
+  "I want to make you a promise today:",
+  "Whatever the future holds,",
+  "I'm always just a call away. Always. 📞❤️",
   "",
-  "I don't know what the future holds,",
-  "but I know one thing for sure.",
-  "I want that future with you. 💕",
+  "You're perfect, slightly unhinged, and",
+  "absolutely mine. 🥰",
+  "",
+  "Happy Birthday, my love! 🎂",
+  "Let's stay obsessed with each other forever. 💕",
 ];
 
 const LoveLetter = ({ onNext }: Props) => {
@@ -82,7 +81,7 @@ const LoveLetter = ({ onNext }: Props) => {
             animate={{ opacity: 1, y: 0 }}
             className="text-2xl font-display text-gradient-purple mt-8 mb-4"
           >
-            So, will you be mine forever? 💜
+            So, are you ready to be stuck with me forever? 💜
           </motion.p>
           <motion.button
             initial={{ scale: 0 }}

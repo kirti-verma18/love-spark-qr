@@ -7,48 +7,48 @@ interface Props {
 
 const questions = [
   {
-    q: "We've done SO many crazy things together... which one do you wanna do again? 🤪",
+    q: "Since it's your special day... what's your ultimate birthday wish today? 🎂",
     options: [
-      "That one late night adventure 🌙",
-      "The time we almost got caught 😂",
-      "Our spontaneous road trip 🚗",
-      "ALL of them, obviously! 🔥",
+      "A huge cake all for myself 🍰",
+      "Unlimited cuddles and kisses from you 😘",
+      "A crazy surprise adventure ✈️",
+      "Just spending the whole day with you ❤️",
     ],
   },
   {
-    q: "Be honest — what's your favourite thing about me? 👀",
+    q: "You're a whole year older! What's the best part about being you right now? 👑",
     options: [
-      "Your smile that fixes everything 😊",
-      "Your dramatic reactions 🎭",
-      "How you steal my food 🍕",
-      "Everything... I'm obsessed 💀",
+      "Aging like absolute fine wine 🍷",
+      "Being the literal main character today ✨",
+      "Having the most amazing partner (me! 😎)",
+      "Unapologetically getting exactly what I want 💅",
     ],
   },
   {
-    q: "If I went missing for a day, what would you do? 🕵️",
+    q: "What do you think is the best gift I could possibly give you today? 🎁",
     options: [
-      "Panic and call 47 times 📞",
-      "Track my location like FBI 🔍",
-      "Post missing posters immediately 📋",
-      "Enjoy the peace and quiet 😂 (wrong answer btw)",
+      "Something shiny and expensive ✨",
+      "A handwritten emotional love letter 📝",
+      "Me. Obviously, I am the gift. 🎀",
+      "A promise to annoy you forever 😈",
     ],
   },
   {
-    q: "What's the most embarrassing thing I've caught you doing? 😏",
+    q: "How excited are you for the rest of your birthday surprises? 🎉",
     options: [
-      "Talking to yourself about me 🗣️",
-      "Stalking my old photos 📸",
-      "Practicing how to say 'I love you' 🥺",
-      "I plead the fifth 🤐",
+      "I literally can't wait!!! 😆",
+      "I'm a little scared... what did you do? 👀",
+      "Is it food? If yes, very excited 🍕",
+      "As long as you're there, I'm happy 💕",
     ],
   },
   {
-    q: "On a scale of crazy, how crazy are we together? 🤯",
+    q: "Are you ready to make this next year of your life the best one yet? 🥺",
     options: [
-      "FBI watchlist level crazy 🚨",
-      "Our parents would disown us 💀",
-      "Perfectly chaotic 🌪️",
-      "We're literally unhinged and I love it 😂",
+      "YES! Bring it on! 🚀",
+      "Let's make some amazing core memories 📸",
+      "I've been ready since the day I met you 😭",
+      "Only if you promise to share your food 🍟",
     ],
   },
 ];

@@ -6,12 +6,18 @@ interface Props {
 }
 
 const getFaceData = (value: number) => {
-  if (value < 20) return { emoji: "😢", text: "Seriously?! That's it?! I'm calling your mom.", color: "text-love-deep" };
-  if (value < 40) return { emoji: "😿", text: "Wow. My cat loves me more than this.", color: "text-love-deep" };
-  if (value < 60) return { emoji: "🥺", text: "Hmm... you're getting warmer... keep going!", color: "text-love-warm" };
-  if (value < 80) return { emoji: "😊", text: "Okay okay, now we're talking! Almost there!", color: "text-love-pink" };
-  if (value < 100) return { emoji: "🥰", text: "Yesss! I can feel the love! Just a little more!", color: "text-love-rose" };
-  return { emoji: "😍", text: "THAT'S MY BABY! I LOVE YOU MORE! 💖💖💖", color: "text-love-pink" };
+  if (value === 0) return { emoji: "🥶", text: "Zero?! Are you serious right now?", color: "text-blue-500" };
+  if (value < 10) return { emoji: "😭", text: "Ouch... my heart is breaking!", color: "text-red-600" };
+  if (value < 20) return { emoji: "😢", text: "Seriously?! That's all I get?", color: "text-red-500" };
+  if (value < 30) return { emoji: "🤨", text: "I'm judging you very hard right now.", color: "text-orange-600" };
+  if (value < 40) return { emoji: "😿", text: "Wait... you're jokingly doing this, right?", color: "text-orange-500" };
+  if (value < 50) return { emoji: "🙄", text: "Not even halfway? Come on.", color: "text-yellow-600" };
+  if (value < 60) return { emoji: "🥺", text: "Hmm... getting warmer... keep going!", color: "text-yellow-500" };
+  if (value < 70) return { emoji: "🤭", text: "I see that smile...", color: "text-love-warm" };
+  if (value < 80) return { emoji: "😊", text: "Okay okay, now we're talking!", color: "text-love-pink" };
+  if (value < 90) return { emoji: "🥰", text: "Yesss! I can feel the love!", color: "text-love-rose" };
+  if (value < 100) return { emoji: "😘", text: "Just a little more!!", color: "text-love-rose" };
+  return { emoji: "😍", text: "THAT'S MY BABY! I LOVE YOU INIFINITELY! 💖💖💖", color: "text-love-pink" };
 };
 
 const LoveSlider = ({ onNext }: Props) => {
@@ -40,23 +46,19 @@ const LoveSlider = ({ onNext }: Props) => {
         transition={{ delay: 0.3 }}
         className="text-sm text-muted-foreground mb-8 font-body"
       >
-        Choose wisely... your birthday gifts depend on this 😤
+        Choose wisely... your birthday surprises depend on this 😤
       </motion.p>
 
       <motion.div
-        key={face.emoji}
-        initial={{ scale: 0.5, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
+        animate={{ scale: [1, 1.1, 1] }}
+        transition={{ duration: 0.3 }}
         className="text-8xl mb-4"
       >
         {face.emoji}
       </motion.div>
 
       <motion.p
-        key={face.text}
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        className={`text-lg font-body font-semibold mb-2 max-w-xs ${face.color}`}
+        className={`text-lg font-body font-semibold mb-2 max-w-xs transition-colors duration-300 ${face.color}`}
       >
         {face.text}
       </motion.p>

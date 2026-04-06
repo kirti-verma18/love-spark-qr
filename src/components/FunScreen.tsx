@@ -6,14 +6,14 @@ interface Props {
 }
 
 const loveNotes = [
-  "You're the best decision my heart ever made 💖",
-  "Every day with you feels like a plot twist I never saw coming 😂✨",
-  "You're my 2 AM thought and my 8 AM smile ☀️",
-  "If loving you is wrong, I don't wanna be right (cheesy but TRUE) 🧀",
-  "You make my heart do that stupid fluttery thing 🦋",
-  "I'd choose you in every universe, every timeline, every life 🌌",
-  "You're literally the human version of a warm blanket 🥰",
-  "My favourite notification is still your name on my screen 📱💕",
+  "You're the absolute best thing that's ever happened to me, hands down. 🏆",
+  "I love you more than words could ever possibly explain. 🥺💕",
+  "You make every single day feel like magic just by being in it. ✨",
+  "Being folded safely in your arms is my favorite place in the world. ❤️",
+  "You still give me those crazy little butterflies every single day. 🦋",
+  "You are my favorite late-night thought and my favorite morning text. ☀️",
+  "I'd choose you in every lifetime, in every completely messed up universe. 🌌",
+  "Happy Birthday to the man who holds my entire heart! 🎂💖",
 ];
 
 const FunScreen = ({ onNext }: Props) => {
