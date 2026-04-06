@@ -1,14 +1,17 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import ConfettiExplosion from "./ConfettiExplosion";
 
 const BirthdayMessage = () => {
   const [showCard, setShowCard] = useState(false);
   const [showExtras, setShowExtras] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(true);
 
   useEffect(() => {
     const t1 = setTimeout(() => setShowCard(true), 2500);
     const t2 = setTimeout(() => setShowExtras(true), 4000);
-    return () => { clearTimeout(t1); clearTimeout(t2); };
+    const t3 = setTimeout(() => setShowConfetti(false), 5000);
+    return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
   }, []);
 
   return (
@@ -17,13 +20,15 @@ const BirthdayMessage = () => {
       animate={{ opacity: 1 }}
       className="flex flex-col items-center justify-center min-h-screen px-6 py-12 text-center relative z-10"
     >
+      {showConfetti && <ConfettiExplosion />}
+
       <motion.div
-        initial={{ scale: 0, rotate: -20 }}
-        animate={{ scale: 1, rotate: 0 }}
-        transition={{ type: "spring", stiffness: 150, delay: 0.3 }}
-        className="text-7xl mb-2"
+        initial={{ scale: 0 }}
+        animate={{ scale: [0, 1.5, 1] }}
+        transition={{ duration: 0.8 }}
+        className="text-8xl mb-4"
       >
-        🎂
+        💖
       </motion.div>
 
       <motion.div
@@ -67,7 +72,7 @@ const BirthdayMessage = () => {
         <p className="text-base font-body text-muted-foreground leading-relaxed">
           Thank you for being my partner in crime, my 3 AM therapist, my favourite person to annoy, and the one who makes my heart go 📈📈📈 every single day.
         </p>
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2 }}
