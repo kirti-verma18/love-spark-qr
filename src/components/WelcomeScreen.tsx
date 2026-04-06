@@ -16,9 +16,15 @@ const WelcomeScreen = ({ onNext }: Props) => {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ type: "spring", delay: 0.3, stiffness: 200 }}
-        className="text-8xl mb-6 animate-heartbeat"
+        className="text-8xl mb-6"
       >
-        💖
+        <motion.div
+          animate={{ scale: [1, 1.15, 1] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+          className="w-28 h-28 rounded-full border-4 border-love-purple flex items-center justify-center glow-purple"
+        >
+          💜
+        </motion.div>
       </motion.div>
 
       <motion.h1
