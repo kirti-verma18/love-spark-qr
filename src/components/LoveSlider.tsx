@@ -6,12 +6,12 @@ interface Props {
 }
 
 const getFaceData = (value: number) => {
-  if (value < 20) return { emoji: "😢", text: "Bas itna?! Dil tod diya...", color: "text-love-deep" };
-  if (value < 40) return { emoji: "😿", text: "Itna kam?! Rula doge kya...", color: "text-love-deep" };
-  if (value < 60) return { emoji: "🥺", text: "Hmm... thoda aur badha sakte ho...", color: "text-love-warm" };
-  if (value < 80) return { emoji: "😊", text: "Aww! Ab baat ban rahi hai!", color: "text-love-pink" };
-  if (value < 100) return { emoji: "🥰", text: "Yeh hui na baat! Almost there!", color: "text-love-rose" };
-  return { emoji: "😍", text: "I LOVE YOU MORE! 💖💖💖", color: "text-love-pink" };
+  if (value < 20) return { emoji: "😢", text: "Seriously?! That's it?! I'm calling your mom.", color: "text-love-deep" };
+  if (value < 40) return { emoji: "😿", text: "Wow. My cat loves me more than this.", color: "text-love-deep" };
+  if (value < 60) return { emoji: "🥺", text: "Hmm... you're getting warmer... keep going!", color: "text-love-warm" };
+  if (value < 80) return { emoji: "😊", text: "Okay okay, now we're talking! Almost there!", color: "text-love-pink" };
+  if (value < 100) return { emoji: "🥰", text: "Yesss! I can feel the love! Just a little more!", color: "text-love-rose" };
+  return { emoji: "😍", text: "THAT'S MY BABY! I LOVE YOU MORE! 💖💖💖", color: "text-love-pink" };
 };
 
 const LoveSlider = ({ onNext }: Props) => {
@@ -31,7 +31,7 @@ const LoveSlider = ({ onNext }: Props) => {
         animate={{ y: 0, opacity: 1 }}
         className="text-3xl md:text-4xl font-display text-gradient-love mb-2"
       >
-        Mujhse kitna pyaar karte ho?
+        How much do you love me?
       </motion.h2>
 
       <motion.p
@@ -40,7 +40,7 @@ const LoveSlider = ({ onNext }: Props) => {
         transition={{ delay: 0.3 }}
         className="text-sm text-muted-foreground mb-8 font-body"
       >
-        Slider se batao na... 🥺
+        Choose wisely... your birthday gifts depend on this 😤
       </motion.p>
 
       <motion.div
@@ -56,7 +56,7 @@ const LoveSlider = ({ onNext }: Props) => {
         key={face.text}
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        className={`text-lg font-body font-semibold mb-2 ${face.color}`}
+        className={`text-lg font-body font-semibold mb-2 max-w-xs ${face.color}`}
       >
         {face.text}
       </motion.p>
@@ -80,22 +80,16 @@ const LoveSlider = ({ onNext }: Props) => {
         <style>{`
           input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
+            width: 32px; height: 32px; border-radius: 50%;
             background: linear-gradient(135deg, hsl(340 82% 55%), hsl(350 90% 65%));
             box-shadow: 0 4px 15px hsl(340 82% 55% / 0.4);
-            cursor: pointer;
-            border: 3px solid white;
+            cursor: pointer; border: 3px solid white;
           }
           input[type="range"]::-moz-range-thumb {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
+            width: 32px; height: 32px; border-radius: 50%;
             background: linear-gradient(135deg, hsl(340 82% 55%), hsl(350 90% 65%));
             box-shadow: 0 4px 15px hsl(340 82% 55% / 0.4);
-            cursor: pointer;
-            border: 3px solid white;
+            cursor: pointer; border: 3px solid white;
           }
         `}</style>
       </div>
@@ -110,7 +104,7 @@ const LoveSlider = ({ onNext }: Props) => {
           onClick={onNext}
           className="bg-gradient-love text-primary-foreground font-body font-semibold px-10 py-4 rounded-full shadow-love text-lg"
         >
-          Yeh sahi jawab hai! 💕
+          Now THAT's the right answer! 💕
         </motion.button>
       )}
     </motion.div>

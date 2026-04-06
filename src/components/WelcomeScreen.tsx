@@ -27,7 +27,7 @@ const WelcomeScreen = ({ onNext }: Props) => {
         transition={{ delay: 0.6 }}
         className="text-5xl md:text-6xl font-display text-gradient-love mb-4"
       >
-        Hey Baby!
+        Hey Handsome!
       </motion.h1>
 
       <motion.p
@@ -36,25 +36,25 @@ const WelcomeScreen = ({ onNext }: Props) => {
         transition={{ delay: 0.9 }}
         className="text-lg font-body text-muted-foreground max-w-sm mb-2"
       >
-        Aaj tera special din hai... 🎂
+        So today is YOUR special day... 🎂
       </motion.p>
 
       <motion.p
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1.1 }}
-        className="text-base font-body text-muted-foreground max-w-sm mb-8"
+        className="text-base font-body text-muted-foreground max-w-sm mb-4"
       >
-        Lekin pehle ek choti si cheez batani padegi... 😏
+        But before we get to the good stuff, you gotta prove something first... 😏
       </motion.p>
 
       <motion.p
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1.4 }}
-        className="text-sm font-body text-love-deep italic mb-8"
+        className="text-sm font-body text-love-deep italic max-w-xs mb-8"
       >
-        Haan haan pata hai aaj tera din hai, lekin mere to sab din tere hi hain na! 💕
+        Yes yes, I know it's YOUR day... but honestly? Every single day of mine belongs to you anyway 💕
       </motion.p>
 
       <motion.button
@@ -66,7 +66,7 @@ const WelcomeScreen = ({ onNext }: Props) => {
         onClick={onNext}
         className="bg-gradient-love text-primary-foreground font-body font-semibold px-10 py-4 rounded-full shadow-love text-lg"
       >
-        Chalo Batao! 💘
+        Alright, Let's Go! 💘
       </motion.button>
     </motion.div>
   );
