@@ -26,6 +26,7 @@ export default {
           deep: "hsl(var(--love-deep))",
           warm: "hsl(var(--love-warm))",
           glow: "hsl(var(--love-glow))",
+          purple: "hsl(var(--love-purple))",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
