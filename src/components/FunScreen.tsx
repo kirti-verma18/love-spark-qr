@@ -100,7 +100,7 @@ const FunScreen = ({ onNext }: Props) => {
           onClick={onNext}
           className="bg-gradient-love text-primary-foreground font-body font-semibold px-10 py-4 rounded-full shadow-love text-lg"
         >
-          One Last Surprise! 🎁
+          One Last Thing... ✨
         </motion.button>
       )}
     </motion.div>

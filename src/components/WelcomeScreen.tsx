@@ -52,7 +52,7 @@ const WelcomeScreen = ({ onNext }: Props) => {
         transition={{ delay: 1.2 }}
         className="text-base font-body text-muted-foreground max-w-sm mb-5"
       >
-        I have so much to say and a few surprises waiting, but before we dive in I want to say...
+        I have so much to say and share with you, but before we dive in I want to say...
       </motion.p>
 
       <motion.p

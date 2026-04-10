@@ -8,7 +8,7 @@ interface Props {
 const messages = [
   "Wait... do you feel that? ✨",
   "Something's coming your way...",
-  "And no, it's not another generic surprise. 😉",
+  "And no, this isn't just any random link. 😉",
   "It's something personal. Something purely 'US'.",
   "Ready to enter our tiny world? ❤️"
 ];

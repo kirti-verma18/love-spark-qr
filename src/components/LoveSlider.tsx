@@ -46,7 +46,7 @@ const LoveSlider = ({ onNext }: Props) => {
         transition={{ delay: 0.3 }}
         className="text-sm text-muted-foreground mb-8 font-body"
       >
-        Your surprises are directly proportional to this slider! 😤
+        My mood for the rest of the day is directly proportional to this slider! 😤
       </motion.p>
 
       <motion.div
