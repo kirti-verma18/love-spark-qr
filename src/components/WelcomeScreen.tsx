@@ -21,9 +21,10 @@ const WelcomeScreen = ({ onNext }: Props) => {
         <motion.div
           animate={{ scale: [1, 1.15, 1] }}
           transition={{ duration: 1.5, repeat: Infinity }}
-          className="w-28 h-28 rounded-full border-4 border-love-purple flex items-center justify-center glow-purple"
+          style={{ willChange: "transform", backfaceVisibility: "hidden", WebkitFontSmoothing: "antialiased" }}
+          className="w-28 h-28 rounded-full border-4 border-love-purple flex items-center justify-center glow-purple transform-gpu"
         >
-          💜
+          <span style={{ backfaceVisibility: "hidden", transform: "translateZ(0)" }}>💜</span>
         </motion.div>
       </motion.div>
 
