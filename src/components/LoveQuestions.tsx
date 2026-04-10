@@ -18,10 +18,10 @@ const questions = [
   {
     q: "You're a whole year older! What's the best part about being you right now? 👑",
     options: [
-      "Aging like absolute fine wine 🍷",
-      "Being the literal main character today ✨",
+      "Looking like absolute perfection every day 💅",
+      "Being the literal main character ✨",
       "Having the most amazing partner (me! 😎)",
-      "Unapologetically getting exactly what I want 💅",
+      "Unapologetically getting exactly what I want 😌",
     ],
   },
   {
@@ -34,21 +34,21 @@ const questions = [
     ],
   },
   {
-    q: "How excited are you for the rest of your birthday surprises? 🎉",
+    q: "What's your favorite thing about us? 💫",
     options: [
-      "I literally can't wait!!! 😆",
-      "I'm a little scared... what did you do? 👀",
-      "Is it food? If yes, very excited 🍕",
-      "As long as you're there, I'm happy 💕",
+      "The way we can talk for hours about nothing 🗣️",
+      "How you always know what I'm thinking 🧠",
+      "Our late night conversations 🌙",
+      "Everything. Literally everything. ❤️",
     ],
   },
   {
     q: "Are you ready to make this next year of your life the best one yet? 🥺",
     options: [
-      "YES! Bring it on! 🚀",
-      "Let's make some amazing core memories 📸",
-      "I've been ready since the day I met you 😭",
-      "Only if you promise to share your food 🍟",
+      "Obviously! With you by my side 🚀",
+      "Only if every day feels like today ✨",
+      "I already know it will be, because of you 🥹",
+      "We're going to be unstoppable together 💪❤️",
     ],
   },
 ];
@@ -86,9 +86,8 @@ const LoveQuestions = ({ onNext }: Props) => {
         {questions.map((_, i) => (
           <div
             key={i}
-            className={`h-1.5 rounded-full transition-all duration-500 ${
-              i <= current ? "w-8 bg-love-pink" : "w-4 bg-love-glow/40"
-            }`}
+            className={`h-1.5 rounded-full transition-all duration-500 ${i <= current ? "w-8 bg-love-pink" : "w-4 bg-love-glow/40"
+              }`}
           />
         ))}
       </div>
@@ -115,11 +114,10 @@ const LoveQuestions = ({ onNext }: Props) => {
                 whileHover={{ scale: 1.03, x: 5 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => handleSelect(opt)}
-                className={`w-full py-4 px-6 rounded-2xl font-body font-medium text-left transition-all duration-300 ${
-                  selected === opt
-                    ? "bg-gradient-love text-primary-foreground shadow-love"
-                    : "bg-card border border-border hover:border-love-pink hover:shadow-love/20"
-                }`}
+                className={`w-full py-4 px-6 rounded-2xl font-body font-medium text-left transition-all duration-300 ${selected === opt
+                  ? "bg-gradient-love text-primary-foreground shadow-love"
+                  : "bg-card border border-border hover:border-love-pink hover:shadow-love/20"
+                  }`}
               >
                 {opt}
               </motion.button>

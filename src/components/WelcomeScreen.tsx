@@ -33,7 +33,7 @@ const WelcomeScreen = ({ onNext }: Props) => {
         transition={{ delay: 0.6 }}
         className="text-4xl md:text-5xl font-display text-gradient-love mb-4"
       >
-        Happy Birthday, Pookie! ❤️
+        My Pookie... ❤️
       </motion.h1>
 
       <motion.p
@@ -42,7 +42,7 @@ const WelcomeScreen = ({ onNext }: Props) => {
         transition={{ delay: 0.9 }}
         className="text-lg font-body text-muted-foreground max-w-sm mb-3"
       >
-        To the one who holds my heart and makes my entire world brighter just by existing in it... 🎂✨
+        To the one who holds my heart and makes my entire world brighter just by existing in it... ✨
       </motion.p>
 
       <motion.p
@@ -51,7 +51,7 @@ const WelcomeScreen = ({ onNext }: Props) => {
         transition={{ delay: 1.2 }}
         className="text-base font-body text-muted-foreground max-w-sm mb-5"
       >
-        I have so much to say and a few surprises waiting, but before we dive in...
+        I have so much to say and a few surprises waiting, but before we dive in I want to say...
       </motion.p>
 
       <motion.p

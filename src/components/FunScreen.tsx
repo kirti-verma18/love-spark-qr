@@ -6,14 +6,14 @@ interface Props {
 }
 
 const loveNotes = [
-  "You're the absolute best thing that's ever happened to me, hands down. 🏆",
-  "I love you more than words could ever possibly explain. 🥺💕",
-  "You make every single day feel like magic just by being in it. ✨",
-  "Being folded safely in your arms is my favorite place in the world. ❤️",
-  "You still give me those crazy little butterflies every single day. 🦋",
-  "You are my favorite late-night thought and my favorite morning text. ☀️",
-  "I'd choose you in every lifetime, in every completely messed up universe. 🌌",
-  "Happy Birthday to the man who holds my entire heart! 🎂💖",
+  { text: "You're the absolute best thing that's ever happened to me, hands down. 🏆", emoji: "🤐" },
+  { text: "I love you more than words could ever possibly explain. 🥺💕", emoji: "💎" },
+  { text: "You make every single day feel like magic just by being in it. ✨", emoji: "🧩" },
+  { text: "Being folded safely in your arms is my favorite place in the world. ❤️", emoji: "🏹" },
+  { text: "You still give me those crazy little butterflies every single day. 🦋", emoji: "🔮" },
+  { text: "You are my favorite late-night thought and my favorite morning text. ☀️", emoji: "📜" },
+  { text: "I'd choose you in every lifetime, in every completely messed up universe. 🌌", emoji: "🌋" },
+  { text: "Wait for the very last screen... I have something big to say. 🤫", emoji: "🗝️" },
 ];
 
 const FunScreen = ({ onNext }: Props) => {
@@ -59,19 +59,19 @@ const FunScreen = ({ onNext }: Props) => {
             whileHover={{ scale: revealed.includes(i) ? 1 : 1.05, rotate: revealed.includes(i) ? 0 : 2 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => handleReveal(i)}
-            className={`p-4 rounded-2xl cursor-pointer min-h-[110px] flex items-center justify-center transition-all duration-500 ${
+            className={`p-4 rounded-2xl cursor-pointer min-h-[110px] flex items-center justify-center transition-all duration-500 border backdrop-blur-sm ${
               revealed.includes(i)
-                ? "bg-gradient-love shadow-love"
-                : "bg-card border-2 border-dashed border-love-pink hover:border-love-warm"
+                ? "bg-gradient-love border-love-pink/50 shadow-love"
+                : "bg-card/40 border-love-pink/30 hover:bg-card/60 hover:border-love-pink/50"
             }`}
           >
             {revealed.includes(i) ? (
               <motion.p
                 initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                className="text-primary-foreground font-body text-xs font-medium leading-relaxed"
+                className="text-primary-foreground font-body text-[11px] font-medium leading-tight"
               >
-                {note}
+                {note.text}
               </motion.p>
             ) : (
               <motion.span
@@ -79,7 +79,7 @@ const FunScreen = ({ onNext }: Props) => {
                 transition={{ duration: 2, repeat: Infinity, delay: i * 0.3 }}
                 className="text-4xl"
               >
-                💌
+                {note.emoji}
               </motion.span>
             )}
           </motion.div>

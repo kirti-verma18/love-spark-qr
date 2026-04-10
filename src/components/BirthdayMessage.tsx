@@ -144,8 +144,12 @@ const BirthdayCake = () => (
   </motion.div>
 );
 
+interface Props {
+  onNext?: () => void;
+}
+
 /* ─── Main Component ─── */
-const BirthdayMessage = () => {
+const BirthdayMessage = ({ onNext }: Props = {}) => {
   const [phase, setPhase] = useState(0);
   const [showConfetti, setShowConfetti] = useState(true);
 
@@ -332,26 +336,43 @@ const BirthdayMessage = () => {
               ))}
             </motion.div>
 
-            {/* Replay Button */}
-            <motion.button
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.5, type: "spring" }}
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => {
-                setPhase(0);
-                setShowConfetti(true);
-                setTimeout(() => setPhase(1), 1500);
-                setTimeout(() => setPhase(2), 3500);
-                setTimeout(() => setPhase(3), 5500);
-                setTimeout(() => setPhase(4), 7500);
-                setTimeout(() => setShowConfetti(false), 5000);
-              }}
-              className="mt-3 font-body text-sm px-6 py-2.5 rounded-full border border-love-pink/40 text-love-pink hover:bg-love-pink/10 transition-colors"
-            >
-              🔄 Replay the magic
-            </motion.button>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-3">
+              {/* Replay Button */}
+              <motion.button
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1.5, type: "spring" }}
+                whileHover={{ scale: 1.08 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  setPhase(0);
+                  setShowConfetti(true);
+                  setTimeout(() => setPhase(1), 1500);
+                  setTimeout(() => setPhase(2), 3500);
+                  setTimeout(() => setPhase(3), 5500);
+                  setTimeout(() => setPhase(4), 7500);
+                  setTimeout(() => setShowConfetti(false), 5000);
+                }}
+                className="font-body text-sm px-6 py-2.5 rounded-full border border-love-pink/40 text-love-pink hover:bg-love-pink/10 transition-colors"
+              >
+                🔄 Replay the magic
+              </motion.button>
+              
+              {/* Thank You / Continue Button */}
+              {onNext && (
+                <motion.button
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 1.8, type: "spring" }}
+                  whileHover={{ scale: 1.08 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={onNext}
+                  className="font-body text-sm px-6 py-2.5 rounded-full bg-gradient-love text-primary-foreground shadow-love hover:brightness-110 transition-all"
+                >
+                  One last thing... 💌
+                </motion.button>
+              )}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

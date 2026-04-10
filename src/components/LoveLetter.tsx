@@ -20,8 +20,8 @@ const letterLines = [
   "You're perfect, slightly unhinged, and",
   "absolutely mine. 🥰",
   "",
-  "Happy Birthday, my love! 🎂",
-  "Let's stay obsessed with each other forever. 💕",
+  "And now, my love...",
+  "It's time for the real reason I made this. ❤️",
 ];
 
 const LoveLetter = ({ onNext }: Props) => {

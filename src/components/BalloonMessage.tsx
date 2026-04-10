@@ -53,8 +53,8 @@ const BalloonMessage = ({ onNext }: Props) => {
             className="flex flex-col items-center"
           >
             <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 2, repeat: Infinity, delay: i * 0.3 }}
+              animate={{ y: [0, -12 - i * 4, 0], rotate: [0, i % 2 === 0 ? 2 : -2, 0] }}
+              transition={{ duration: 2.5 + i * 0.5, repeat: Infinity, delay: i * 0.4, ease: "easeInOut" }}
               className="relative"
             >
               <svg width="90" height="100" viewBox="0 0 90 100">

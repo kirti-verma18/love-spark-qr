@@ -37,7 +37,7 @@ const LoveSlider = ({ onNext }: Props) => {
         animate={{ y: 0, opacity: 1 }}
         className="text-3xl md:text-4xl font-display text-gradient-love mb-2"
       >
-        How much do you love me?
+        Slide to show me how much you adore me! 🔊🥰
       </motion.h2>
 
       <motion.p
@@ -46,7 +46,7 @@ const LoveSlider = ({ onNext }: Props) => {
         transition={{ delay: 0.3 }}
         className="text-sm text-muted-foreground mb-8 font-body"
       >
-        Choose wisely... your birthday surprises depend on this 😤
+        Your surprises are directly proportional to this slider! 😤
       </motion.p>
 
       <motion.div

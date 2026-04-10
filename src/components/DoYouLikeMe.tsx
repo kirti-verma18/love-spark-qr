@@ -46,13 +46,11 @@ const HeartBurst = () => {
 
 /* ─── Drama Texts that flash ─── */
 const dramaSequence = [
-  { text: "OMG OMG OMG!!! 😱", size: "3rem" },
-  { text: "WAIT... REALLY?! 🤯", size: "3.5rem" },
-  { text: "YOU SAID YES!! 🥹💖", size: "3rem" },
-  { text: "I'M LITERALLY DYING RN 😭💕", size: "2.5rem" },
-  { text: "brb, screaming into a pillow 🫠", size: "2rem" },
-  { text: "okay okay I'm cool... 😎", size: "2.2rem" },
-  { text: "...no I'm NOT 🥰🥰🥰", size: "2.5rem" },
+  { text: "Yayyy! My heart just did a tiny flip! 💓", size: "2.5rem" },
+  { text: "I'm literally blushing right now... 🤭", size: "2.8rem" },
+  { text: "You just made my entire day! ✨", size: "3rem" },
+  { text: "Actually, you make my entire life. ❤️", size: "2.5rem" },
+  { text: "Okay, let me catch my breath... 🥰", size: "2.2rem" },
 ];
 
 const DoYouLikeMe = ({ onNext }: Props) => {
@@ -111,9 +109,9 @@ const DoYouLikeMe = ({ onNext }: Props) => {
         animate={
           clickedYes
             ? {
-                x: [0, -8, 8, -6, 6, -4, 4, 0],
-                y: [0, 4, -4, 3, -3, 2, -2, 0],
-              }
+              x: [0, -8, 8, -6, 6, -4, 4, 0],
+              y: [0, 4, -4, 3, -3, 2, -2, 0],
+            }
             : {}
         }
         transition={{ duration: 0.6 }}
@@ -156,7 +154,7 @@ const DoYouLikeMe = ({ onNext }: Props) => {
               transition={{ delay: 0.3 }}
               className="text-5xl md:text-6xl font-display text-foreground mb-3"
             >
-              Do you like me?
+              So... am I still your favorite human? 👉👈
             </motion.h1>
 
             <motion.p
@@ -165,7 +163,7 @@ const DoYouLikeMe = ({ onNext }: Props) => {
               transition={{ delay: 0.6 }}
               className="text-lg font-body text-muted-foreground mb-12"
             >
-              Be honest with me... 🥺
+              No lies allowed! ✋❤️
             </motion.p>
 
             {/* Buttons */}
@@ -207,8 +205,8 @@ const DoYouLikeMe = ({ onNext }: Props) => {
                 {noAttempts >= 6
                   ? "The Yes button is getting bigger... just saying 👀"
                   : noAttempts >= 4
-                  ? "You're really testing me rn 😤"
-                  : "That button has commitment issues just like you 😏"}
+                    ? "You're really testing me rn 😤"
+                    : "That button has commitment issues just like you 😏"}
               </motion.p>
             )}
           </>
